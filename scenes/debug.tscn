@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://ba1ybliyju1op"]
+[gd_scene load_steps=10 format=3 uid="uid://ba1ybliyju1op"]
 
+[ext_resource type="Texture2D" uid="uid://dgdlcds8kryax" path="res://assets/textures/debug.png" id="1_3vd64"]
 [ext_resource type="PackedScene" uid="uid://ce2hegrmb1tep" path="res://scenes/player.tscn" id="1_4pmxj"]
 [ext_resource type="Script" uid="uid://ch1oalnln10j" path="res://scripts/camera.gd" id="1_hjh6i"]
 
@@ -19,7 +20,11 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_4pmxj"]
 size = Vector3(60, 1, 60)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqhvd"]
+albedo_texture = ExtResource("1_3vd64")
+
 [sub_resource type="BoxMesh" id="BoxMesh_4pmxj"]
+material = SubResource("StandardMaterial3D_hqhvd")
 size = Vector3(60, 1, 60)
 
 [node name="Node3D" type="Node3D"]
