@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce2hegrmb1tep"]
+
+[ext_resource type="Script" uid="uid://boxxuvvvhgju8" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://dgqs5re0v27wg" path="res://assets/models/pixel_low_poly_spaceship.glb" id="2_g2els"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhqgy"]
+size = Vector3(1.69336, 0.702148, 1.99658)
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_3vyb7")
+
+[node name="spaceship" parent="." instance=ExtResource("2_g2els")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.996492, 0, 0, 0, 0.996492, 0, 0, 0, 0.996492, 0, 0.280762, -0.00317383)
+shape = SubResource("BoxShape3D_qhqgy")
